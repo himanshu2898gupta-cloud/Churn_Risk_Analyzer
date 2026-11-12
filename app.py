@@ -96,7 +96,7 @@ with col2:
         st.markdown("### 🔍 Key Risk Factors (SHAP Explanation)")
         
         preprocessor = pipeline.named_steps['preprocessor']
-        model = pipeline.named_steps['classifier']
+        model = pipeline[-1]
         
         X_ref_transformed = preprocessor.transform(X_ref)
         input_transformed = preprocessor.transform(input_df)
